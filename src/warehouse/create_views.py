@@ -14,7 +14,7 @@ from pathlib import Path
 import sqlite3
 
 DB_PATH = Path("data/processed/nba_revenue_optimization.sqlite")
-SQL_PATH = Path("sql/create_views.sql")
+SQL_PATH = Path("sql/schema/create_views.sql")
 
 
 def create_views():
