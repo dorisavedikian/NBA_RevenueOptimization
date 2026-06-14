@@ -89,3 +89,41 @@ SELECT
 FROM vw_game_revenue_summary r
 LEFT JOIN vw_funnel_summary f
     ON r.game_id = f.game_id;
+
+    DROP VIEW IF EXISTS vw_final_executive_dashboard;
+
+CREATE VIEW vw_final_executive_dashboard AS
+SELECT
+    d.game_id,
+    d.game_date,
+    d.opponent,
+    d.day_of_week,
+    d.is_weekend,
+    d.opponent_strength,
+
+    d.tickets_sold,
+    d.total_revenue,
+    d.avg_ticket_price,
+    d.inventory_remaining,
+    d.sell_through_rate,
+
+    d.web_sessions,
+    d.cart_rate,
+    d.checkout_rate,
+    d.purchase_rate,
+    d.cart_abandonment_rate,
+
+    s.segment_name,
+    s.business_recommendation,
+
+    f.predicted_tickets_sold,
+    f.predicted_revenue,
+    f.sellout_probability,
+    f.ticket_forecast_error,
+    f.revenue_forecast_error
+
+FROM model_dataset d
+LEFT JOIN game_segments s
+    ON d.game_id = s.game_id
+LEFT JOIN revenue_forecasts f
+    ON d.game_id = f.game_id;
