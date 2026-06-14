@@ -1,9 +1,12 @@
-.DS_Store
+venv/
+env/
 __pycache__/
 *.pyc
 .venv/
-venv/
-env/
+.DS_Store
+*.sqlite
+data/processed/*.csv
+data/processed/*.sqlite
 
 data/raw/*
 data/processed/*

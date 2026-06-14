@@ -1,0 +1,6 @@
+PROJECT_NAME = "NBA Revenue Intelligence"
+MODEL_VERSION = "1.0.0"
+
+RANDOM_SEED = 42
+N_CLUSTERS = 4
+TEST_SIZE = 0.25
