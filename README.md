@@ -64,3 +64,8 @@ This platform helps executives make decisions about:
 - Marketing campaigns
 - Funnel improvement
 - Revenue planning
+
+## How to Run the Full Pipeline
+
+```bash
+python run_pipeline.py
