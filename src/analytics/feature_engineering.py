@@ -9,13 +9,18 @@ Outputs:
     data/processed/model_dataset.csv
     SQL table: model_dataset
 """
-
+import sys
 from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
 import sqlite3
 import pandas as pd
+from src.config import DATABASE_PATH, MODEL_DATASET_PATH
 
-DB_PATH = Path("data/processed/nba_revenue_optimization.sqlite")
-OUTPUT_PATH = Path("data/processed/model_dataset.csv")
+DB_PATH = DATABASE_PATH
+OUTPUT_PATH = MODEL_DATASET_PATH
 
 
 def build_model_dataset():

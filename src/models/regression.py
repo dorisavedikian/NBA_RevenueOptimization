@@ -9,8 +9,12 @@ Outputs:
     data/processed/revenue_forecasts.csv
     SQL table: revenue_forecasts
 """
-
+import sys
 from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
 import sqlite3
 import numpy as np
 import pandas as pd
@@ -19,11 +23,15 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+from src.config import (
+    DATABASE_PATH,
+    MODEL_DATASET_PATH,
+    REVENUE_FORECASTS_PATH,
+)
 
-
-DB_PATH = Path("data/processed/nba_revenue_optimization.sqlite")
-INPUT_PATH = Path("data/processed/model_dataset.csv")
-OUTPUT_PATH = Path("data/processed/revenue_forecasts.csv")
+DB_PATH = DATABASE_PATH
+INPUT_PATH = MODEL_DATASET_PATH
+OUTPUT_PATH = REVENUE_FORECASTS_PATH
 
 
 FEATURES = [

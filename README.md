@@ -34,13 +34,12 @@
 
 ## Overview
 
-NBA Revenue Intelligence is an end-to-end analytics platform that simulates the responsibilities of a Lead Data Analyst supporting a professional sports organization.
+NBA Revenue Intelligence is an end-to-end analytics platform that simulates the responsibilities of a Data Analyst supporting a professional sports organization.
 
 The platform integrates Python, SQL, machine learning, and business intelligence to forecast ticket demand, optimize pricing strategies, evaluate marketing performance, monitor inventory, and generate executive recommendations for revenue optimization.
 
 Rather than analyzing historical box scores or player statistics, this project focuses on the business operations behind professional sports organizations, including ticket sales, customer behavior, marketing funnels, and revenue forecasting.
 
-The result is a modern analytics platform that demonstrates data engineering, predictive analytics, dimensional modeling, business intelligence, and decision-support workflows commonly used by professional sports franchises.
 
 ## Key Features
 
@@ -292,7 +291,7 @@ pip install -r requirements.txt
 Run the pipeline:
 
 ```bash
-python run_pipeline.py
+python main.py
 ```
 
 ## Results
@@ -319,8 +318,3 @@ The final output is a dashboard-ready dataset that enables executives to make pr
 - Price elasticity analysis
 - Propensity modeling
 
-## Why I Built This Project
-
-I built this project to simulate the responsibilities of a Lead Data Analyst working for a professional sports organization. Since ticketing, pricing, and customer behavior data are proprietary, I designed a realistic enterprise ticketing simulation engine that combines real NBA schedule data with synthetic operational data.
-
-The goal was to demonstrate the complete analytics lifecycle—from data engineering and SQL warehousing to machine learning, forecasting, and executive decision support—using the same technologies and workflows commonly found in modern sports analytics organizations.

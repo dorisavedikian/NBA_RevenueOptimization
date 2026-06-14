@@ -10,12 +10,21 @@ Outputs:
     data/processed/executive_recommendations.csv
 """
 
+import sys
 from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
 import sqlite3
 import pandas as pd
+from src.config import (
+    DATABASE_PATH,
+    EXECUTIVE_RECOMMENDATIONS_PATH,
+)
 
-DB_PATH = Path("data/processed/nba_revenue_optimization.sqlite")
-OUTPUT_PATH = Path("data/processed/executive_recommendations.csv")
+DB_PATH = DATABASE_PATH
+OUTPUT_PATH = EXECUTIVE_RECOMMENDATIONS_PATH
 
 
 def build_recommendations():

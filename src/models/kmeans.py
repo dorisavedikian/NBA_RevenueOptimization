@@ -10,15 +10,25 @@ Outputs:
     SQL table: game_segments
 """
 
+import sys
 from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
 import sqlite3
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
+from src.config import (
+    DATABASE_PATH,
+    MODEL_DATASET_PATH,
+    GAME_SEGMENTS_PATH,
+)
 
-DB_PATH = Path("data/processed/nba_revenue_optimization.sqlite")
-INPUT_PATH = Path("data/processed/model_dataset.csv")
-OUTPUT_PATH = Path("data/processed/game_segments.csv")
+DB_PATH = DATABASE_PATH
+INPUT_PATH = MODEL_DATASET_PATH
+OUTPUT_PATH = GAME_SEGMENTS_PATH
 
 
 FEATURES = [

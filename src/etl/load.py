@@ -15,12 +15,17 @@ Outputs:
     data/processed/nba_revenue_optimization.sqlite
 """
 
+import sys
 from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+sys.path.append(str(PROJECT_ROOT))
+
 import sqlite3
 import pandas as pd
+from src.config import DATABASE_PATH, PROCESSED_DIR
 
-PROCESSED_DIR = Path("data/processed")
-DB_PATH = PROCESSED_DIR / "nba_revenue_optimization.sqlite"
+DB_PATH = DATABASE_PATH
 
 TABLES = {
     "dim_games": "dim_games.csv",
