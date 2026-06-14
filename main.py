@@ -13,6 +13,7 @@ steps = [
     "src/models/kmeans.py",
     "src/models/regression.py",
     "src/analytics/kpi_engine.py",
+    "src/analytics/recommendation_engine.py",
     "src/warehouse/create_views.py",
 ]
 
