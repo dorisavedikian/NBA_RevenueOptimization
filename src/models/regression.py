@@ -9,24 +9,25 @@ Outputs:
     data/processed/revenue_forecasts.csv
     SQL table: revenue_forecasts
 """
+import logging
 import sqlite3
+
 import numpy as np
 import pandas as pd
-
-import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
-
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 from sklearn.model_selection import train_test_split
+
 from src.config import (
     DATABASE_PATH,
     MODEL_DATASET_PATH,
     REVENUE_FORECASTS_PATH,
 )
+from src.utils.logger import configure_logging
+
+configure_logging()
+logger = logging.getLogger(__name__)
 
 DB_PATH = DATABASE_PATH
 INPUT_PATH = MODEL_DATASET_PATH
@@ -101,7 +102,9 @@ def train_best_model(X, y):
 
 def run_forecasting():
     if not INPUT_PATH.exists():
-        raise FileNotFoundError("Model dataset not found. Run src/analytics/feature_engineering.py first.")
+        raise FileNotFoundError(
+            "Model dataset not found. Run src/analytics/feature_engineering.py first."
+        )
 
     df = pd.read_csv(INPUT_PATH)
 
@@ -123,7 +126,9 @@ def run_forecasting():
     df["ticket_forecast_error"] = df["tickets_sold"] - df["predicted_tickets_sold"]
     df["revenue_forecast_error"] = df["total_revenue"] - df["predicted_revenue"]
 
-    df["sellout_probability"] = np.clip(df["predicted_tickets_sold"] / df["arena_capacity"], 0, 1)
+    df["sellout_probability"] = np.clip(
+        df["predicted_tickets_sold"] / df["arena_capacity"], 0, 1
+    )
 
     forecasts = df[
         [
@@ -144,14 +149,20 @@ def run_forecasting():
 
     with sqlite3.connect(DB_PATH) as conn:
         forecasts.to_sql("revenue_forecasts", conn, if_exists="replace", index=False)
-        demand_metrics.to_sql("model_metrics_demand", conn, if_exists="replace", index=False)
-        revenue_metrics.to_sql("model_metrics_revenue", conn, if_exists="replace", index=False)
+        demand_metrics.to_sql(
+            "model_metrics_demand", conn, if_exists="replace", index=False
+        )
+        revenue_metrics.to_sql(
+            "model_metrics_revenue", conn, if_exists="replace", index=False
+        )
 
     logger.info("Regression forecasting complete.")
     logger.info(f"Demand model selected: {demand_model_name}")
     logger.info(f"Revenue model selected: {revenue_model_name}")
     logger.info(f"Saved forecasts to {OUTPUT_PATH}")
-    logger.info("Saved SQL tables: revenue_forecasts, model_metrics_demand, model_metrics_revenue")
+    logger.info(
+        "Saved SQL tables: revenue_forecasts, model_metrics_demand, model_metrics_revenue"
+    )
 
     logger.info("\nDemand model metrics:")
     logger.info(demand_metrics)

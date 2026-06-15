@@ -6,3 +6,6 @@ matplotlib
 requests
 nba_api
 
+black
+ruff
+pytest

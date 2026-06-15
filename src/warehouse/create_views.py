@@ -9,13 +9,14 @@ Inputs:
 Outputs:
     SQL views for revenue, customers, funnel, and executive dashboard reporting.
 """
-import sqlite3
 import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
+import sqlite3
 
 from src.config import DATABASE_PATH, SCHEMA_DIR
+from src.utils.logger import configure_logging
+
+configure_logging()
+logger = logging.getLogger(__name__)
 
 SQL_PATH = SCHEMA_DIR / "create_views.sql"
 DB_PATH = DATABASE_PATH

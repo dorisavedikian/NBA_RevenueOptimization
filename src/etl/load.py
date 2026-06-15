@@ -8,23 +8,24 @@ Inputs:
 Outputs:
     data/warehouse/nba_revenue_optimization.sqlite
 """
-import sqlite3
-import pandas as pd
 import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
+import sqlite3
+
+import pandas as pd
 
 from src.config import (
     DATABASE_PATH,
-    DIM_GAMES_PATH,
     DIM_CUSTOMERS_PATH,
-    DIM_SECTIONS_PATH,
+    DIM_GAMES_PATH,
     DIM_PROMOTIONS_PATH,
+    DIM_SECTIONS_PATH,
     FACT_TICKET_TRANSACTIONS_PATH,
     FACT_WEB_SESSIONS_PATH,
 )
+from src.utils.logger import configure_logging
 
+configure_logging()
+logger = logging.getLogger(__name__)
 
 TABLES = {
     "dim_games": DIM_GAMES_PATH,
@@ -48,7 +49,7 @@ def load_csv_to_sql():
 
     conn.close()
 
-    logger.info(f"\nSQLite warehouse created:")
+    logger.info("SQLite warehouse created:")
     logger.info(DATABASE_PATH)
 
 

@@ -9,20 +9,23 @@ Outputs:
     data/processed/game_segments.csv
     SQL table: game_segments
 """
+import logging
 import sqlite3
+
 import pandas as pd
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
 
 from src.config import (
     DATABASE_PATH,
-    MODEL_DATASET_PATH,
     GAME_SEGMENTS_PATH,
+    MODEL_DATASET_PATH,
 )
+from src.utils.logger import configure_logging
+
+configure_logging()
+logger = logging.getLogger(__name__)
+
 
 DB_PATH = DATABASE_PATH
 INPUT_PATH = MODEL_DATASET_PATH
@@ -59,11 +62,17 @@ def assign_segment_names(df):
     abandonment_median = segment_summary["avg_abandonment"].median()
 
     for cluster, row in segment_summary.iterrows():
-        if row["avg_revenue"] >= revenue_median and row["avg_sell_through"] >= sellthrough_median:
+        if (
+            row["avg_revenue"] >= revenue_median
+            and row["avg_sell_through"] >= sellthrough_median
+        ):
             segment_names[cluster] = "Premium Demand"
         elif row["avg_promo"] >= promo_median:
             segment_names[cluster] = "Promotion Opportunity"
-        elif row["avg_abandonment"] >= abandonment_median or row["avg_sell_through"] < sellthrough_median:
+        elif (
+            row["avg_abandonment"] >= abandonment_median
+            or row["avg_sell_through"] < sellthrough_median
+        ):
             segment_names[cluster] = "Inventory Risk"
         else:
             segment_names[cluster] = "Standard Demand"
@@ -78,12 +87,16 @@ def assign_recommendations(segment_name):
         "Promotion Opportunity": "Use targeted discounts, family bundles, or student offers to increase conversion.",
         "Inventory Risk": "Increase marketing support, monitor checkout friction, and consider limited-time promotions.",
     }
-    return recommendations.get(segment_name, "Monitor performance and review pricing strategy.")
+    return recommendations.get(
+        segment_name, "Monitor performance and review pricing strategy."
+    )
 
 
 def run_kmeans():
     if not INPUT_PATH.exists():
-        raise FileNotFoundError("Model dataset not found. Run src/analytics/feature_engineering.py first.")
+        raise FileNotFoundError(
+            "Model dataset not found. Run src/analytics/feature_engineering.py first."
+        )
 
     df = pd.read_csv(INPUT_PATH)
 

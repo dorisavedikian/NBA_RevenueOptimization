@@ -1,42 +1,42 @@
 game_id,opponent,segment,predicted_revenue,sellout_probability,priority,recommendation
-1,PHX,Inventory Risk,2660585987.6999636,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-2,NYK,Premium Demand,4415297574.4070215,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-3,OKC,Inventory Risk,2613426190.7945166,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-4,SAC,Premium Demand,3460253463.1554565,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-5,DAL,Premium Demand,3582003298.65851,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-6,PHX,Premium Demand,3804727957.3737125,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-7,MIL,Inventory Risk,2623921117.4029894,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-8,BOS,Premium Demand,3601864318.4511623,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-9,PHX,Premium Demand,4028862938.7274,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-10,OKC,Inventory Risk,2754318112.6498585,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-11,OKC,Premium Demand,3776085634.243189,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-12,SAC,Inventory Risk,2498813618.3187885,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-13,DAL,Premium Demand,4302056805.051661,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-14,NYK,Premium Demand,3329029878.6472397,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-15,SAC,Inventory Risk,2648238759.2070675,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-16,SAC,Premium Demand,3589484244.5226374,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-17,BOS,Premium Demand,3826329476.9359684,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-18,DEN,Premium Demand,4229076141.472151,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-19,DAL,Premium Demand,3158399090.591363,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-20,GSW,Premium Demand,4841826959.181202,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-21,SAC,Inventory Risk,2650252345.1904316,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-22,SAS,Inventory Risk,2289892441.8743973,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-23,DEN,Premium Demand,4217614367.636669,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-24,GSW,Premium Demand,3716802395.329729,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-25,SAS,Promotion Opportunity,2060350316.9312,1.0,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment. Consider dynamic pricing.
-26,DAL,Inventory Risk,2986663717.1746626,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-27,LAL,Premium Demand,5134233340.500326,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-28,SAS,Inventory Risk,1942998697.0794487,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-29,MIL,Inventory Risk,2845657891.1275024,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-30,DEN,Premium Demand,4123164941.8113594,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-31,SAS,Promotion Opportunity,1849760141.9358063,1.0,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment. Consider dynamic pricing.
-32,MIA,Promotion Opportunity,2083486429.9728365,1.0,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment. Consider dynamic pricing.
-33,LAL,Premium Demand,3812677553.3200865,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-34,OKC,Premium Demand,3702789738.2592363,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-35,OKC,Inventory Risk,2677974549.9903307,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-36,MIL,Inventory Risk,2989142634.652073,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-37,SAS,Promotion Opportunity,1636823864.2401524,1.0,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment. Consider dynamic pricing.
-38,SAS,Inventory Risk,2218937387.369973,1.0,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment. Consider dynamic pricing.
-39,BOS,Premium Demand,4311564615.106821,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
-40,SAS,Promotion Opportunity,1534781976.2453213,1.0,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment. Consider dynamic pricing.
-41,PHX,Premium Demand,3899853065.3520527,1.0,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment. Consider dynamic pricing.
+1,PHX,Inventory Risk,1913205.213643177,0.5783090953587132,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+2,NYK,Premium Demand,2632670.2142330636,0.7134455159081801,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+3,OKC,Inventory Risk,1964538.6948256777,0.5942908204489111,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+4,SAC,Premium Demand,2373703.966836359,0.6770817310045114,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+5,DAL,Premium Demand,2025453.006202404,0.5859140605959205,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+6,PHX,Premium Demand,2468194.9458578317,0.7066108592669839,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+7,MIL,Inventory Risk,1882949.1431332561,0.579457957391352,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+8,BOS,Premium Demand,2213417.756722132,0.622227222866407,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+9,PHX,Premium Demand,2454946.367824745,0.6813898878150442,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+10,OKC,Inventory Risk,1951899.1484207497,0.5625292438064994,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+11,OKC,Premium Demand,2472343.173428481,0.6781581262148453,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+12,SAC,Inventory Risk,1920665.2366346675,0.5750028295581481,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+13,DAL,Premium Demand,2521231.723071054,0.701784545573791,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+14,NYK,Premium Demand,2198343.796868808,0.6267767867846175,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+15,SAC,Inventory Risk,1948824.3605077635,0.5693044112900832,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+16,SAC,Premium Demand,2431379.9926714837,0.6663355922459724,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+17,BOS,Premium Demand,2201558.9361728444,0.6069925078903916,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+18,DEN,Premium Demand,2597781.1306612766,0.6986441086601237,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+19,DAL,Premium Demand,2078808.2960214163,0.5965167916504527,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+20,GSW,Premium Demand,2795127.897355894,0.7255965460268688,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+21,SAC,Inventory Risk,1866390.3759911568,0.5634915691929984,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+22,SAS,Inventory Risk,1763380.0802172353,0.5529569232002745,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+23,DEN,Premium Demand,2572445.416300612,0.7077432026393153,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+24,GSW,Premium Demand,2281951.4340623557,0.6249363260494318,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+25,SAS,Promotion Opportunity,1893323.6848274707,0.5985247960217163,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment.
+26,DAL,Inventory Risk,2132670.9222532357,0.6203881351837894,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+27,LAL,Premium Demand,2801696.702638352,0.7274106004247257,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+28,SAS,Inventory Risk,1733823.4847014467,0.5578483705028919,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+29,MIL,Inventory Risk,1988692.702249236,0.5709767662379117,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+30,DEN,Premium Demand,2534450.8041256494,0.6864368124994797,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+31,SAS,Promotion Opportunity,1596662.1073131752,0.5075976559315801,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment.
+32,MIA,Promotion Opportunity,1839158.7873799824,0.5894260073912228,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment.
+33,LAL,Premium Demand,2340008.6989096995,0.6303580067034579,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+34,OKC,Premium Demand,2430084.592168572,0.6757718763203123,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+35,OKC,Inventory Risk,1924663.7165987534,0.584515965925623,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+36,MIL,Inventory Risk,1951472.0183591726,0.6022105212991926,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+37,SAS,Promotion Opportunity,1570273.4076150064,0.5378025440602379,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment.
+38,SAS,Inventory Risk,1791569.96941777,0.5778791645873315,Medium,Increase marketing spend and improve checkout conversion. Investigate checkout abandonment.
+39,BOS,Premium Demand,2703118.4690078706,0.7023072537697714,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.
+40,SAS,Promotion Opportunity,1419189.160682118,0.5136339182567359,Medium,Launch targeted promotions such as Student Night or Family Pack. Investigate checkout abandonment.
+41,PHX,Premium Demand,2442864.7458206736,0.6883740416220073,High,Increase premium seating prices 5-10% and release additional premium inventory. Investigate checkout abandonment.

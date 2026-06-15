@@ -1,2 +1,2 @@
-from .paths import *
-from .settings import *
+from src.config.paths import *  # noqa: F403
+from src.config.settings import *  # noqa: F403

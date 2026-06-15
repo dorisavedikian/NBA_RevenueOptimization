@@ -9,24 +9,25 @@ Outputs:
     SQL table: executive_recommendations
     data/processed/executive_recommendations.csv
 """
-import sqlite3
-import pandas as pd
 import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
+import sqlite3
+
+import pandas as pd
 
 from src.config import (
     DATABASE_PATH,
     EXECUTIVE_RECOMMENDATIONS_PATH,
 )
+from src.utils.logger import configure_logging
+
+configure_logging()
+logger = logging.getLogger(__name__)
 
 DB_PATH = DATABASE_PATH
 OUTPUT_PATH = EXECUTIVE_RECOMMENDATIONS_PATH
 
 
 def build_recommendations():
-
     conn = sqlite3.connect(DB_PATH)
 
     query = """
@@ -52,41 +53,28 @@ def build_recommendations():
     recommendations = []
 
     for _, row in df.iterrows():
-
         recommendation = ""
         priority = "Medium"
 
         if row.segment_name == "Premium Demand":
-
-            recommendation = (
-                "Increase premium seating prices 5-10% and release additional premium inventory."
-            )
+            recommendation = "Increase premium seating prices 5-10% and release additional premium inventory."
             priority = "High"
 
         elif row.segment_name == "Promotion Opportunity":
-
             recommendation = (
                 "Launch targeted promotions such as Student Night or Family Pack."
             )
 
         elif row.segment_name == "Inventory Risk":
-
-            recommendation = (
-                "Increase marketing spend and improve checkout conversion."
-            )
+            recommendation = "Increase marketing spend and improve checkout conversion."
 
         else:
-
-            recommendation = (
-                "Maintain current pricing strategy and monitor sales pace."
-            )
+            recommendation = "Maintain current pricing strategy and monitor sales pace."
 
         if row.cart_abandonment_rate > 0.45:
-
             recommendation += " Investigate checkout abandonment."
 
         if row.sellout_probability > 0.95:
-
             recommendation += " Consider dynamic pricing."
 
         recommendations.append(
@@ -120,5 +108,4 @@ def build_recommendations():
 
 
 if __name__ == "__main__":
-
     build_recommendations()

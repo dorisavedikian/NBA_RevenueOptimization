@@ -9,17 +9,19 @@ Outputs:
     SQL table: executive_kpis
     data/processed/executive_kpis.csv
 """
-import sqlite3
-import pandas as pd
 import logging
-from src.utils.logger import configure_logging
-configure_logging()
-logger = logging.getLogger(__name__)
+import sqlite3
+
+import pandas as pd
 
 from src.config import (
     DATABASE_PATH,
     EXECUTIVE_KPIS_PATH,
 )
+from src.utils.logger import configure_logging
+
+configure_logging()
+logger = logging.getLogger(__name__)
 
 DB_PATH = DATABASE_PATH
 OUTPUT_PATH = EXECUTIVE_KPIS_PATH
