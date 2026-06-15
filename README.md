@@ -112,27 +112,15 @@ This approach enables the development of production-style data engineering pipel
 
 ## System Architecture
 
-The platform follows a modular analytics architecture that separates data simulation, ETL, warehousing, machine learning, and business intelligence into independent components.
-
-<p align="center">
-  <img src="docs/images/architecture.png" width="900">
-</p>
+![Architecture](docs/images/architecture.png)
 
 ## Star Schema
 
-The dimensional data warehouse follows a star schema optimized for analytical workloads. Dimension tables describe business entities while fact tables capture transactional ticket sales and website activity.
-
-<p align="center">
-  <img src="docs/images/star_schema.png" width="900">
-</p>
+![Star Schema](docs/images/star_schema.png)
 
 ## Analytics Pipeline
 
-The end-to-end analytics workflow transforms NBA schedule data into executive-ready business intelligence through simulation, ETL, SQL warehousing, feature engineering, machine learning, KPI generation, and recommendation engines.
-
-<p align="center">
-  <img src="docs/images/pipeline.png" width="900">
-</p>
+![Pipeline](docs/images/pipeline.png)
 
 ## Platform Components
 
