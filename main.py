@@ -19,6 +19,7 @@ steps = [
     "src.models.regression",
     "src.analytics.kpi_engine",
     "src.analytics.recommendation_engine",
+    "src.visualization.generate_figures",
     "src.warehouse.create_views",
 ]
 
