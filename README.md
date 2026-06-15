@@ -131,6 +131,32 @@ This approach enables the development of production-style data engineering pipel
 
 ![Pipeline](docs/images/pipeline.png)
 
+## Sample Outputs
+
+The analytics pipeline automatically generates executive datasets and visualizations that support downstream reporting and business intelligence.
+
+### Revenue by Opponent
+
+![Revenue by Opponent](output/figures/revenue_by_opponent.png)
+
+---
+
+### Forecast vs Actual Revenue
+
+![Forecast](output/figures/forecast_vs_actual.png)
+
+---
+
+### Game Demand Segments
+
+![Segments](output/figures/game_segments.png)
+
+---
+
+### Ticket Purchase Funnel
+
+![Funnel](output/figures/checkout_funnel.png)
+
 ## Platform Components
 
 The platform is organized into modular components:
@@ -373,15 +399,5 @@ The completed platform demonstrates a full analytics workflow representative of 
 
 The project showcases practical experience in data engineering, SQL development, predictive analytics, business intelligence, and software engineering while emphasizing how analytics can drive pricing, marketing, inventory, and revenue decisions.
 
-## Pipeline Outputs
 
-The pipeline generates the following analytical assets:
-
-- SQLite dimensional data warehouse
-- Machine learning feature dataset
-- K-Means demand segmentation
-- Revenue forecasts
-- Executive KPI dataset
-- Executive recommendations
-- Dashboard-ready SQL views
 
