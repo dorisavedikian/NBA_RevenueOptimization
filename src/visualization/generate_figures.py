@@ -9,11 +9,14 @@ Outputs:
 """
 
 import logging
-
 import matplotlib.pyplot as plt
 import pandas as pd
-
-from src.config import EXECUTIVE_RECOMMENDATIONS_PATH, FIGURES_DIR, MODEL_DATASET_PATH
+from src.config import (
+    REVENUE_FORECASTS_PATH,
+    EXECUTIVE_RECOMMENDATIONS_PATH,
+    FIGURES_DIR,
+    MODEL_DATASET_PATH,
+)
 from src.utils.logger import configure_logging
 
 configure_logging()
@@ -105,7 +108,10 @@ def main() -> None:
     df = build_figure_dataset()
 
     save_revenue_by_opponent(df)
-    save_forecast_vs_actual(df)
+
+    forecast_df = pd.read_csv(REVENUE_FORECASTS_PATH)
+    save_forecast_vs_actual(forecast_df)
+
     save_game_segments(df)
     save_checkout_funnel(df)
 
