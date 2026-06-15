@@ -2,11 +2,21 @@
 
 End-to-End Sports Revenue Analytics Platform for Professional Sports Organizations
 
+![CI](https://github.com/dorisavedikian/NBA_RevenueIntelligence/actions/workflows/ci.yml/badge.svg)
+
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
+
+![Black](https://img.shields.io/badge/code%20style-black-000000)
+
+![Ruff](https://img.shields.io/badge/linting-ruff-purple)
+
+![Pytest](https://img.shields.io/badge/tests-pytest-green)
 
 ![SQL](https://img.shields.io/badge/SQL-SQLite-green)
 
 ![Machine Learning](https://img.shields.io/badge/Machine%20Learning-scikit--learn-orange)
+
+![License](https://img.shields.io/badge/license-MIT-blue)
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
 
