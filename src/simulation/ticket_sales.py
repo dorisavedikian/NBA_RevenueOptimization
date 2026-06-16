@@ -14,6 +14,7 @@ Outputs:
     data/warehouse/fact_ticket_transactions.csv
     data/warehouse/fact_web_sessions.csv
 """
+
 import logging
 
 import numpy as np

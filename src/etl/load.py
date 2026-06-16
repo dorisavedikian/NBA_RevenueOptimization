@@ -8,6 +8,7 @@ Inputs:
 Outputs:
     data/warehouse/nba_revenue_optimization.sqlite
 """
+
 import logging
 import sqlite3
 

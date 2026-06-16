@@ -9,6 +9,7 @@ Outputs:
     SQL table: executive_recommendations
     data/processed/executive_recommendations.csv
 """
+
 import logging
 import sqlite3
 

@@ -9,6 +9,7 @@ Outputs:
     SQL table: executive_kpis
     data/processed/executive_kpis.csv
 """
+
 import logging
 import sqlite3
 

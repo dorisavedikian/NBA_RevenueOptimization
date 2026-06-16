@@ -9,6 +9,7 @@ Outputs:
     data/processed/game_segments.csv
     SQL table: game_segments
 """
+
 import logging
 import sqlite3
 

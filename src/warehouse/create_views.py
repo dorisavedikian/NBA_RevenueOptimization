@@ -9,6 +9,7 @@ Inputs:
 Outputs:
     SQL views for revenue, customers, funnel, and executive dashboard reporting.
 """
+
 import logging
 import sqlite3
 

@@ -9,6 +9,7 @@ Outputs:
     data/processed/revenue_forecasts.csv
     SQL table: revenue_forecasts
 """
+
 import logging
 import sqlite3
 
