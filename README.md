@@ -81,7 +81,31 @@ This project demonstrates how modern analytics techniques can transform operatio
 
 ## Star Schema
 
+The project uses a dimensional star schema designed for analytical workloads.
+
+### Dimension Tables
+
+- dim_games
+- dim_customers
+- dim_sections
+- dim_promotions
+
+### Fact Tables
+
+- fact_ticket_transactions
+- fact_web_sessions
+
 ![Star Schema](docs/images/star_schema.png)
+
+### Analytical Outputs
+
+- model_dataset
+- game_segments
+- revenue_forecasts
+- executive_kpis
+- executive_recommendations
+
+This design separates descriptive business entities from transactional data to support scalable reporting and machine learning workflows.
 
 ## Analytics Pipeline
 
@@ -113,32 +137,6 @@ The analytics pipeline automatically generates executive datasets and visualizat
     </td>
   </tr>
 </table>
-
-## Dimensional Data Warehouse
-
-The project uses a dimensional star schema designed for analytical workloads.
-
-### Dimension Tables
-
-- dim_games
-- dim_customers
-- dim_sections
-- dim_promotions
-
-### Fact Tables
-
-- fact_ticket_transactions
-- fact_web_sessions
-
-### Analytical Outputs
-
-- model_dataset
-- game_segments
-- revenue_forecasts
-- executive_kpis
-- executive_recommendations
-
-This design separates descriptive business entities from transactional data to support scalable reporting and machine learning workflows.
 
 ## Machine Learning
 
