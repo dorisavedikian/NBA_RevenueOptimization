@@ -14,102 +14,103 @@ An end-to-end sports analytics platform that simulates NBA ticketing operations 
 
 ![Power BI](https://img.shields.io/badge/Power%20BI-Dashboard-yellow)
 
+## Project Highlights
+
+- 25,000 simulated customers
+- 200,000+ ticket transactions
+- 60,000+ web sessions
+- 41 NBA home games
+- End-to-end ETL pipeline
+- Star schema warehouse
+- Machine learning forecasting
+- Power BI executive dashboards
+
+## Pipeline
+
+![Pipeline](docs/images/pipeline.png)
+
 ## Overview
 
-NBA Revenue Intelligence is an end-to-end analytics platform that simulates the ticketing and revenue analytics workflows of a professional sports organization.
+NBA Revenue Intelligence is an end-to-end sports analytics platform that simulates the ticketing operations of a professional NBA organization.
 
-The project demonstrates the complete analytics lifecycle—from data ingestion and ETL through SQL warehousing, feature engineering, predictive modeling, KPI reporting, and dashboard-ready outputs—using technologies commonly found in modern analytics organizations.
+Because real ticketing and customer data are proprietary, the platform combines real NBA schedule data (via `nba_api`) with a realistic synthetic business layer that models ticket transactions, customer behavior, promotions, pricing, inventory, and web conversion funnels.
 
-## Key Features
+The project demonstrates a complete analytics workflow including:
 
-- End-to-end ETL pipeline built with Python
-- Synthetic enterprise ticketing simulation engine
-- SQL dimensional data warehouse
-- Executive KPI reporting layer
-- K-Means game demand segmentation
-- Revenue forecasting using regression models
-- Executive recommendation engine
-- Dashboard-ready SQL views and datasets for Power BI.
-- One-click analytics pipeline
+- Data simulation
+- Python ETL
+- SQL data warehousing
+- Feature engineering
+- Machine learning
+- Executive KPI reporting
+- Power BI dashboards
+
+<details>
+<summary><b>Data Sources</b></summary>
+
+**Real NBA Data (`nba_api`)**
+
+- Schedule
+- Teams
+- Opponents
+- Game Dates
+
+**Simulated Business Data**
+
+- Ticket Transactions
+- Customer Demographics
+- Seating Inventory
+- Dynamic Pricing
+- Promotions
+- Website Sessions
+- Purchase Funnel Events
+- Revenue & Sell-through Metrics
+
+</details>
 
 ## Technology Stack
 
 | Category | Technologies |
 |-----------|--------------|
-| Programming Language | Python 3 |
-| Data Engineering | Custom ETL Pipeline |
-| Database | SQLite (Designed for PostgreSQL Migration) |
-| SQL | Star Schema, SQL Views, Analytics Queries |
+| Programming | Python 3 |
 | Data Processing | pandas, NumPy |
+| Database | SQLite (Designed for PostgreSQL Migration) |
+| SQL | Star Schema Design, SQL Views, Analytical Queries |
 | Machine Learning | scikit-learn (K-Means Clustering, Linear Regression) |
-| Data Source | nba_api (NBA Schedule & Team Data) |
-| Business Intelligence | Power BI |
-| Software Engineering | Modular Python Package, Virtual Environments |
-| Version Control | Git & GitHub |
-
-## Business Context
-
-Professional sports organizations rely on analytics to optimize ticket pricing, maximize revenue, improve fan engagement, and forecast demand.
-
-This project demonstrates how modern analytics techniques can transform operational ticketing data into actionable business intelligence.
-
-## Data Source & Simulation
-
-### Real Data
-
-- NBA schedule and game information (via `nba_api`)
-- Teams
-- Opponents
-- Game dates
-
-### Simulated Business Data
-
-- Ticket transactions
-- Customer demographics
-- Arena seating inventory
-- Dynamic ticket pricing
-- Marketing promotions
-- Website sessions
-- Purchase funnel events
-- Revenue
-- Sell-through
-- Inventory
+| Data Source | `nba_api` |
+| Visualization | Power BI, Matplotlib |
+| Testing & Quality | Pytest, Ruff, Black |
+| Development | Git, GitHub, GitHub Actions |
 
 ## System Architecture
 
 ![Architecture](docs/images/architecture.png)
 
-## Star Schema
+## Data Warehouse
 
-The project uses a dimensional star schema designed for analytical workloads.
+The platform uses a dimensional star schema consisting of:
 
-### Dimension Tables
+**Dimensions**
 
-- dim_games
-- dim_customers
-- dim_sections
-- dim_promotions
+- Games
+- Customers
+- Sections
+- Promotions
 
-### Fact Tables
+**Facts**
 
-- fact_ticket_transactions
-- fact_web_sessions
+- Ticket Transactions
+- Web Sessions
+
+**Analytics Tables**
+
+- Model Dataset
+- Game Segments
+- Revenue Forecasts
+- Executive KPIs
+- Executive Recommendations
 
 ![Star Schema](docs/images/star_schema.png)
-
-### Analytical Outputs
-
-- model_dataset
-- game_segments
-- revenue_forecasts
-- executive_kpis
-- executive_recommendations
-
-This design separates descriptive business entities from transactional data to support scalable reporting and machine learning workflows.
-
-## Analytics Pipeline
-
-![Pipeline](docs/images/pipeline.png)
 
 ## Sample Outputs
 
@@ -138,111 +139,58 @@ The analytics pipeline automatically generates executive datasets and visualizat
   </tr>
 </table>
 
-## Machine Learning
+## Analytics & Decision Support
 
-The platform includes both unsupervised and supervised machine learning models designed to support ticketing strategy and revenue optimization.
+The platform applies machine learning and business intelligence techniques to transform operational ticketing data into executive insights.
 
-### K-Means Clustering
+### Machine Learning
 
-Segments games into demand profiles based on pricing, revenue, inventory, and customer behavior.
+- K-Means demand segmentation
+- Revenue forecasting
+- Sell-through prediction
+- Sellout probability estimation
 
-- Premium Demand
-- Standard Demand
-- Promotion Opportunity
-- Inventory Risk
+### Executive Analytics
 
-### Regression Forecasting
-
-Regression models predict key business metrics including:
-
-- Ticket demand
 - Revenue
-- Sell-through rate
-- Sellout probability
-
-Forecasts are written back into the Dimensional Data Warehouse, allowing downstream reporting tools and dashboards to compare historical performance with future projections.
-
-## Business Intelligence
-
-Core KPIs include:
-
-- Total Revenue
-- Tickets Sold
-- Sell-through Rate
-- Inventory Remaining
+- Ticket Sales
 - Average Ticket Price
-- Funnel Conversion
+- Inventory Remaining
+- Conversion Funnel
 - Cart Abandonment
-- Forecast Revenue
-- Sellout Probability
+- Sell-through Rate
 
-## Executive Decision Support
-
-Example outputs include:
+### Example Business Recommendations
 
 | Scenario | Recommendation |
 |----------|----------------|
-| Premium Demand | Increase premium seating prices |
-| Promotion Opportunity | Launch targeted marketing campaign |
-| Inventory Risk | Increase advertising and promotions |
-| High Checkout Abandonment | Improve checkout experience |
-
-The objective is to help executives translate analytics into measurable business decisions.
+| Premium Demand | Increase premium pricing |
+| Promotion Opportunity | Launch marketing campaign |
+| Inventory Risk | Increase advertising |
+| High Cart Abandonment | Improve checkout experience |
 
 ## Project Structure
 
 ```text
 NBA_RevenueIntelligence/
 │
-├── .github/
-│   └── workflows/
-│       └── ci.yml
-│
-├── dashboard/
-│   ├── powerbi/
-│   └── screenshots/
-│
+├── .github/              # CI/CD workflows
+├── dashboard/            # Power BI dashboards & screenshots
 ├── data/
-│   ├── analytics/
-│   │   ├── executive_kpis.csv
-│   │   ├── executive_recommendations.csv
-│   │   ├── game_segments.csv
-│   │   ├── model_dataset.csv
-│   │   └── revenue_forecasts.csv
-│   │
-│   ├── external/
-│   ├── raw/
-│   └── warehouse/
-│       ├── dim_customers.csv
-│       ├── dim_games.csv
-│       ├── dim_promotions.csv
-│       ├── dim_sections.csv
-│       ├── fact_ticket_transactions.csv
-│       ├── fact_web_sessions.csv
-│       └── nba_revenue_optimization.sqlite
+│   ├── analytics/        # Model outputs & KPIs
+│   ├── external/         # External data sources
+│   ├── raw/              # Raw datasets
+│   └── warehouse/        # SQLite warehouse & tables
 │
-├── docs/
-│   ├── images/
-│   ├── architecture.md
-│   ├── business_case.md
-│   ├── business_requirements.md
-│   └── data_dictionary.md
-│
-├── notebooks/
-│
+├── docs/                 # Project documentation & diagrams
+├── notebooks/            # Exploratory analysis
 ├── output/
-│   └── figures/
-│       ├── checkout_funnel.png
-│       ├── forecast_vs_actual.png
-│       ├── game_segments.png
-│       └── revenue_by_opponent.png
+│   └── figures/          # Auto-generated visualizations
 │
 ├── sql/
-│   ├── analytics/
-│   ├── schema/
-│   │   └── create_views.sql
-│   └── tests/
-│       └── qa_checks.sql
+│   ├── analytics/        # Dashboard SQL queries
+│   ├── schema/           # Database schema
+│   └── tests/            # SQL quality checks
 │
 ├── src/
 │   ├── analytics/
@@ -254,72 +202,38 @@ NBA_RevenueIntelligence/
 │   ├── visualization/
 │   └── warehouse/
 │
-├── tests/
-│   ├── test_analytics.py
-│   ├── test_analytics_sql.py
-│   ├── test_config.py
-│   ├── test_database.py
-│   ├── test_outputs.py
-│   ├── test_project_structure.py
-│   ├── test_simulation.py
-│   └── test_sql_directory.py
+├── tests/                # Automated unit tests
 │
-├── .gitignore
-├── LICENSE
-├── main.py
+├── main.py               # End-to-end pipeline
 ├── pyproject.toml
+├── requirements.txt
 ├── README.md
-└── requirements.txt
+└── LICENSE
 ```
 
 ## Installation
 
-Clone the repository:
-
 ```bash
 git clone https://github.com/dorisavedikian/NBA_RevenueIntelligence.git
-```
 
-Navigate into the project:
-
-```bash
 cd NBA_RevenueIntelligence
-```
 
-Create a virtual environment:
-
-```bash
 python -m venv .venv
-```
 
-Activate it:
+source .venv/bin/activate      # Windows: .venv\Scripts\activate
 
-macOS/Linux
-
-```bash
-source .venv/bin/activate
-```
-
-Windows
-
-```powershell
-.venv\Scripts\activate
-```
-
-Install dependencies:
-
-```bash
 pip install -r requirements.txt
-```
 
-Run the pipeline:
-
-```bash
 python main.py
 ```
 
 Running `main.py` executes the complete analytics pipeline, including data generation, ETL, warehouse construction, feature engineering, machine learning, KPI generation, and executive recommendations.
 
-## Results
+## Future Enhancements
 
-The completed platform demonstrates an end-to-end analytics workflow representative of a modern sports business intelligence team.
+- Generalize the platform for any NBA team by externalizing team-specific assumptions into configuration files, including arena capacity, seating sections, pricing tiers, opponent demand weights, promotions, and schedule inputs.
+- Migrate the data warehouse from SQLite to PostgreSQL.
+- Deploy the analytics platform to Azure or AWS.
+- Schedule automated pipeline execution using Apache Airflow.
+- Extend forecasting models with advanced machine learning techniques.
+- Create documentation.
