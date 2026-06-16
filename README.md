@@ -46,23 +46,10 @@ The platform demonstrates a complete analytics workflow spanning:
 <details>
 <summary><b>Data Sources</b></summary>
 
-**Real NBA Data (`nba_api`)**
+The platform combines **real NBA schedule data** from `nba_api` with a **synthetic operational dataset** that simulates the ticketing, pricing, marketing, and customer activity of a professional NBA organization.
 
-- Schedule
-- Teams
-- Opponents
-- Game Dates
-
-**Simulated Business Data**
-
-- Ticket Transactions
-- Customer Demographics
-- Seating Inventory
-- Dynamic Pricing
-- Promotions
-- Website Sessions
-- Purchase Funnel Events
-- Revenue & Sell-through Metrics
+- **Real NBA Data:** Schedule, teams, opponents, and game dates.
+- **Synthetic Operational Data:** Ticket transactions, customer demographics, seating inventory, dynamic pricing, promotions, website activity, purchase funnel events, and revenue metrics.
 
 </details>
 
@@ -90,22 +77,19 @@ The platform demonstrates a complete analytics workflow spanning:
 
 ## Data Warehouse
 
-The platform uses a dimensional star schema with the following core tables:
+The platform uses a dimensional star schema to support analytical reporting and machine learning.
 
 **Dimensions**
-
 - Games
 - Customers
 - Sections
 - Promotions
 
 **Facts**
-
 - Ticket Transactions
 - Web Sessions
 
 **Analytics Tables**
-
 - Model Dataset
 - Game Segments
 - Revenue Forecasts
@@ -114,9 +98,11 @@ The platform uses a dimensional star schema with the following core tables:
 
 ![Star Schema](docs/images/star_schema.png)
 
-## Sample Outputs
+---
 
-The analytics pipeline automatically generates executive datasets and visualizations that support downstream reporting and business intelligence.
+## Analytics Outputs
+
+The analytics pipeline automatically generates dashboard-ready datasets, machine learning predictions, executive KPIs, business recommendations, and visualizations.
 
 <table>
   <tr>
@@ -141,9 +127,11 @@ The analytics pipeline automatically generates executive datasets and visualizat
   </tr>
 </table>
 
+---
+
 ## Analytics & Decision Support
 
-The analytics layer combines machine learning and business intelligence to generate demand forecasts, executive KPIs, and actionable business recommendations.
+The platform combines machine learning and business intelligence to support pricing, marketing, inventory management, and revenue optimization.
 
 ### Machine Learning
 
@@ -152,24 +140,24 @@ The analytics layer combines machine learning and business intelligence to gener
 - Sell-through prediction
 - Sellout probability estimation
 
-### Executive Analytics
+### Executive KPIs
 
 - Revenue
 - Ticket Sales
 - Average Ticket Price
 - Inventory Remaining
-- Conversion Funnel
-- Cart Abandonment
 - Sell-through Rate
+- Conversion Funnel
+- Cart Abandonment Rate
 
-### Example Business Recommendations
+### Example Recommendations
 
 | Scenario | Recommendation |
 |----------|----------------|
-| Premium Demand | Increase premium pricing |
-| Promotion Opportunity | Launch marketing campaign |
-| Inventory Risk | Increase advertising |
-| High Cart Abandonment | Improve checkout experience |
+| Premium Demand | Increase premium seating prices |
+| Promotion Opportunity | Launch targeted marketing campaigns |
+| Inventory Risk | Increase marketing and promotional efforts |
+| High Cart Abandonment | Optimize the checkout experience |
 
 ## Project Structure
 
